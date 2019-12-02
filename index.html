@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900,400i,500i,700i&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon-gisele.png"/>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Curso Oro-Odonto Facial</title>
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    
+    <script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery('#questionario').submit(function(){
+            $("#modal-wrapper1").show();
+            var dados = jQuery( this ).serialize();
+
+            jQuery.ajax({
+                type: "POST",
+                url: "teste.php",
+
+                data: dados,
+                success: function( data )
+                {
+                    $("#div1").html(data);
+                    $("#modal-wrapper1").one("click", function(){
+                      $(this).hide();
+                    });
+            
+                    
+                }
+            });
+            
+            return false;
+        });
+    });
+ 
+
+$(document).ready(function() {
+            // Get media - with autoplay disabled (audio or video)
+            var media = $('#video').not("[autoplay='autoplay']");
+            var tolerancePixel = 40;
+
+            function checkMedia(){
+                // Get current browser top and bottom
+                var scrollTop = $(window).scrollTop() + tolerancePixel;
+                var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
+
+                media.each(function(index, el) {
+                    var yTopMedia = $(this).offset().top;
+                    var yBottomMedia = $(this).height() + yTopMedia;
+
+                    if(scrollTop < yBottomMedia && scrollBottom > yTopMedia){ //view explaination in `In brief` section above
+                        $(this).get(0).play();
+                    } else {
+                        $(this).get(0).pause();
+                    }
+                });
+
+                //}
+            }
+            $(document).on('scroll', checkMedia);
+        });
+    </script>
+
+
+  </head>
+  <body>
+  
+  <div class="container d-inline">
+    <h1 class="fw-900 uppercase float-left">BRAND LOGO</h1>
+    <h1 class="fw-900 text-uppercase float-right">text</h1>
+  </div>
+  <div class="container mt-5 embed-responsive embed-responsive-21by9">
+    <div class="container-fluid mx-auto">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/w4pRf8gs9jo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" class="embed-responsive-item" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="container-fluid mt-2">
+    <div class="container">
+      <button type="button" class="btn borghesi-bgcolor white btn-lg btn-block rounded-pill mt-5">Block level button</button>
+    </div>
+  </div>
+
+    <div class="container mt-4">
+      <h1 class="text-center">Conheça os cursos da Borghesi</h1>
+      <p class="text-center">Entenda porque você tem q escolher os cursos da Borghesi</p>
+    </div>
+
+    <div class="container-fluid mt-5">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+          <img src="images/prancheta.png" alt="Imagem Prancheta" />
+          <h5>Lorem Ipsum</h5>
+          <p>Lorem Ipsum Inmet sei lá das quantas</p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+          <img src="images/selo.jpg" alt="Imagem Selo" />
+          <h5>Lorem ipsum</h5>
+          <p>Lorem Ipsum Inmet sei lá das quantas</p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+          <img src="images/like.jpg" alt="Imagem Joinha" />
+          <h5>Lorem Ipsum</h5>
+          <p>Lorem Ipsum Inmet sei lá das quantas</p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-3">
+          <img src="images/aula.jpg" alt="Imagem Dando aula" />
+          <h5>Lorem Ipsum</h5>
+          <p>Lorem Ipsum Inmet sei lá das quantas</p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-3">
+          <img src="images/brasil.jpg" alt="Imagem Mapa Brasil" />
+          <h5>Lorem Ipsum</h5>
+          <p>Lorem Ipsum Inmet sei lá das quantas</p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-3">
+          <img src="images/livro.jpg" alt="Imagem Livro" />
+          <h5>Lorem Ipsum</h5>
+          <p>Lorem Ipsum Inmet sei lá das quantas</p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-3">
+          <img src="images/produtos.jpg" alt="Imagem Produtos" />
+          <h5>Lorem Ipsum</h5>
+          <p>Lorem Ipsum Inmet sei lá das quantas</p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-3">
+          <img src="images/gota.jpg" alt="Imagem Pingos" />
+          <h5>Lorem Ipsum</h5>
+          <p>Lorem Ipsum Inmet sei lá das quantas</p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-3">
+          <img src="images/best_seller.jpg" alt="Imagem Best Seller" />
+          <h5>Lorem Ipsum</h5>
+          <p>Lorem Ipsum Inmet sei lá das quantas</p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-3">
+          <img src="images/creme.jpg" alt="Imagem Acesso" />
+          <h5>Lorem Ipsum</h5>
+          <p>Lorem Ipsum Inmet sei lá das quantas</p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-3">
+          <img src="images/apostila.jpg" alt="Imagem Apostila" />
+          <h5>Lorem Ipsum</h5>
+          <p>Lorem Ipsum Inmet sei lá das quantas</p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-3">
+          <img src="images/zap.jpg" alt="Icon Whatsapp" />
+          <h5>Lorem Ipsum</h5>
+          <p>Lorem Ipsum Inmet sei lá das quantas</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt-5">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 text-center">
+          <img src="images/fotogisele.jpg" class="img-fluid-borghesi" >
+        </div>
+        <div class="col-lg-5 col-md-12 col-sm-12">
+          <ul class="list-unstyled text-center">
+            <li class="list-unstyled"> 
+              <h1 class="text-uppercase borghesi-color d-inline-block">Gisele</h1>
+              <h1 class="text-uppercase borghesi-color font-weight-bold d-inline">Borghesi</h1>
+            </li>
+          </ul>
+          <ul class="mt-5 list-unstyled">
+            <li>
+              <p>Gisele Alves Borghesi é graduada em odontologia, especialista em DTM e Dor orofacial pela faculdade São Leopoldo Mandic e formada em odontologia do sono pela AFIP (UNIFESP) no instituto do sono.</p>
+            </li>
+            <li>
+              <p>A escolha pela área de dor veio a partir da procura por uma área onde conseguisse de fato, ajudar pessoas. A área de dor orofacial foi escolhida devido aos inúmeros casos existentes de pacientes em busca de solução para suas dores e a falta de profissionais capacitados para atuar no segmento.</p>
+            </li>
+            <li>
+              <p>“Meu caminho tem sido trilhado com paixão e vontade em ver pessoas solucionando suas dores e suas questões emocionais envolvidas, que a princípio vista sem solução” comenta a dra. Borghesi.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center my-4">
+      <button type="button" class="btn borghesi-bgcolor2 white btn-lg btn-block rounded-pill">Block level button</button>
+      <p class="red fw-900 my-5">*Vagas extremamente limitadas!</p>
+    </div>
+  </div>
+
+  <div class="container-fluid text-center mt-3">
+    <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-2">
+        <img src="images/boleto.png" alt="Pagar pelo boleto">
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-2">
+        <img src="images/visa.png" alt="Pagar pelo Visa">
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-2">
+        <img src="images/mastercard.png" alt="Pagar pelo Mastercard">
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-2">
+        <img src="images/paypal.png" alt="Pagar pelo Paypal">
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-2">
+        <img src="images/hipercard.png" alt="Pagar pelo Hipercard">
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-2">
+        <img src="images/american.png" alt="Pagar pelo American Express">
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12 justify-content-center d-flex mt-5">
+    <a style="position:absolute; margin-top:5px; z-index:1;" class="pointer d-flex" onclick="document.getElementById('modal-wrapper').style.display='block'">
+      <img src="images/arrowdown.png">
+    </a>
+  </div>
+
+  <section class="joguinho mt-5" style="background:#f2f2f2;">
+    <div class="container ">
+            
+              <div class="col-md-12 justify-content-center d-flex">
+              <h1 style="font-weight: 300; margin-top:100px;">DESCUBRA</h1>
+               </div>
+    
+               <div class="col-md-12 justify-content-center d-flex">
+            <h1 style="color: #03be98;">SE VOCÊ TEM DTM</h1>
+        </div>
+    
+    
+    <form class="mt-5" action="" method="post" id="questionario">
+     <div class="row">
+            <div class=" col-12 col-md-10"><h6>Sente dificuldade para abrir a boca?</h6></div>
+        <div class="col-12 col-md-2 form-check text-center text-md-center radio-group">
+          
+            <input type="radio" name="questao1" id="questao1-1" value="Sim" required="">
+               <label for="questao1-1"> Sim</label>
+            <input type="radio" name="questao1" id="questao1-2" value="Não"> 
+                <label for="questao1-2"> Não </label>
+    
+         
+        </div>
+    </div> 
+    
+     <div class="row">
+            <div class="col-12 col-md-10"><h6>Sente dificuldade para movimentar a mandíbula para os lados?</h6></div>
+        <div class="col-12 col-md-2 form-check text-center text-md-center radio-group">
+            <input type="radio" name="questao2" id="questao2-1" value="Sim" required=""> 
+            <label for="questao2-1"> Sim</label>
+            <input type="radio" name="questao2" id="questao2-2" value="Não">
+              <label for="questao2-2"> Não </label>
+    
+          
+        </div>
+    </div> 
+    
+     <div class="row">
+            <div class="col-12 col-md-10"><h6>Tem cansaço ou dor muscular quando mastiga?</h6></div>
+        <div class="col-12 col-md-2 form-check text-center text-md-center radio-group">
+            <input type="radio" name="questao3" id="questao3-1" value="Sim" required=""> 
+            <label for="questao3-1"> Sim</label>
+            <input type="radio" name="questao3" id="questao3-2" value="Não"> 
+            <label for="questao3-2"> Não </label>
+    
+        </div>
+    </div> 
+    
+     <div class="row">
+            <div class="col-12 col-md-10"><h6>Sente dores de cabeça com frequência?</h6></div>
+        <div class="col-12 col-md-2 form-check text-center text-md-center radio-group">
+            <input type="radio" name="questao4" id="questao4-1" value="Sim" required=""> 
+                  <label for="questao4-1"> Sim</label>
+            <input type="radio" name="questao4" id="questao4-2" value="Não">
+              <label for="questao4-2"> Não </label>
+       
+        </div>
+    </div> 
+    
+     <div class="row">
+            <div class="col-12 col-md-10"><h6>Sente dor na nuca ou torcicolo?</h6></div>
+        <div class="col-12 col-md-2 form-check text-center text-md-center radio-group">
+            <input type="radio" name="questao5" id="questao5-1" value="Sim" required=""> 
+            <label for="questao5-1"> Sim</label>
+            <input type="radio" name="questao5" id="questao5-2" value="Não"> 
+            <label for="questao5-2"> Não </label>
+    
+      
+        </div>
+    </div> 
+    
+     <div class="row">
+            <div class="col-12 col-md-10"><h6>Tem dor de ouvido ou nas articulações?</h6></div>
+        <div class="col-12 col-md-2 form-check text-center text-md-center radio-group">
+            <input type="radio" name="questao6" id="questao6-1" value="Sim" required=""> 
+              <label for="questao6-1"> Sim</label>
+            <input type="radio" name="questao6" id="questao6-2" value="Não"> 
+            <label for="questao6-2"> Não </label>
+    
+       
+        </div>
+    </div> 
+    
+     <div class="row">
+            <div class="col-12 col-md-10"><h6>Já notou ruído nas articulações quando mastiga ou abre a boca?</h6></div>
+        <div class="col-12 col-md-2 form-check text-center text-md-center radio-group">
+            <input type="radio" name="questao7" id="questao7-1" value="Sim" required="">
+            <label for="questao7-1"> Sim</label>
+            <input type="radio" name="questao7" id="questao7-2" value="Não">
+            <label for="questao7-2"> Não </label>
+    
+     
+        </div>
+    </div> 
+    
+     <div class="row">
+            <div class="col-12 col-md-10"><h6>Já observou se tem algum hábito de apertar e/ou rangir os dentes?</h6></div>
+        <div class="col-12 col-md-2 form-check text-center text-md-center radio-group">
+            <input type="radio" name="questao8" id="questao8-1" value="Sim" required=""> 
+            <label for="questao8-1"> Sim</label>
+            <input type="radio" name="questao8" id="questao8-2" value="Não"> 
+            <label for="questao8-2"> Não </label>
+    
+        </div>
+    </div> 
+    
+     <div class="row">
+            <div class="col-12 col-md-10"><h6>Sente que seus dentes não se articulam bem?</h6></div>
+        <div class="col-12 col-md-2 form-check text-center text-md-center radio-group">
+            <input type="radio" name="questao9" id="questao9-1" value="Sim" required="">
+            <label for="questao9-1"> Sim</label> 
+            <input type="radio" name="questao9" id="questao9-2" value="Não"> 
+            <label for="questao9-2"> Não </label>
+    
+        </div>
+    </div> 
+    
+     <div class="row">
+            <div class="col-12 col-md-10"><h6>Você se considera uma pessoa tensa ou nervosa?</h6></div>
+        <div class="col-12 col-md-2 form-check text-center text-md-center radio-group">
+            <input type="radio" name="questao10" id="questao10-1" value="Sim" required="">
+            <label for="questao10-1"> Sim</label>
+            <input type="radio" name="questao10" id="questao10-2" value="Não"> 
+            <label for="questao10-2"> Não </label>
+    
+        </div>
+    </div> 
+    <div class="col-md-12 py-5" align="center">
+      <p style="color:#03be98; font-weight:300px">Você se considera uma pessoa tensa ou nervosa?</p>
+      <button type="submit" value="Enviar" style="background:#690d2e; color:white; font-weight: 600; font-family:Raleway;" class="btn">GERAR RESULTADO</button>
+      </div>   
+    </form>
+    </div>
+    <!--Formulario invisivel-->
+    
+              <div id="modal-wrapper1" class="modal">
+    
+            
+                    <div class="container justify-content-center d-flex align-self-center modal-content animate" id="resultado">
+                         <div id="div1" class=" justify-content-center d-flex align-self-center form-row pt-2">
+                         
+                         </div>  
+                    </div>
+            
+                
+                </div>
+    
+          
+        
+    </section>
+
+  <div class="container-fluid text-center mt-5">
+    <h1 class="blue">Por que fazer o Curso Online de Dor Oro-Facial</h1>
+    <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12 mt-3">
+          <img src="https://via.placeholder.com/500x300" class="rounded img-fluid" >
+      </div>
+      <div class="col-lg-5 col-md-12 col-sm-12 mt-3">
+        <h4 class="font-weight-bold text-left">25 Anos de Experiência e Mais de 12.000 Tratamentos Realizados</h4>
+        <p class="grey text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt saepe magnam quae itaque ipsa. Quaerat, perferendis numquam! Iure dignissimos doloremque, doloribus molestiae pariatur voluptate commodi ducimus totam cum quos reprehenderit!</p>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <div class="container-fluid border-bottom border-black w-50 mt-5">  </div>
+
+  <div class="container-fluid text-center mt-5">
+      <h1 class="blue">Por que fazer o Curso Online de Dor Oro-Facial</h1>
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 mt-3">
+            <img src="https://via.placeholder.com/500x300" class="rounded img-fluid" >
+        </div>
+        <div class="col-lg-5 col-md-12 col-sm-12 mt-3">
+          <h4 class="font-weight-bold text-left">25 Anos de Experiência e Mais de 12.000 Tratamentos Realizados</h4>
+          <p class="grey text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt saepe magnam quae itaque ipsa. Quaerat, perferendis numquam! Iure dignissimos doloremque, doloribus molestiae pariatur voluptate commodi ducimus totam cum quos reprehenderit!</p>
+        </div>
+      </div>
+  </div>
+
+  <div class="container-fluid border-bottom border-black w-50 mt-5">  </div>
+
+  <div class="container-fluid mt-5 pb-4">
+      <div class="container text-center mt-4">
+        <button type="button" class="btn borghesi-bgcolor2 white btn-lg btn-block rounded-pill mt-5">Block level button</button>
+        <p class="red fw-900 my-5">*Vagas extremamente limitadas!</p>
+      </div>
+  </div>
+
+  <div class="container-fluid text-center mt-5">
+      <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-2">
+          <img src="images/boleto.png" alt="Pagar pelo boleto">
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-2">
+          <img src="images/visa.png" alt="Pagar pelo Visa">
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-2">
+          <img src="images/mastercard.png" alt="Pagar pelo Mastercard">
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-2">
+          <img src="images/paypal.png" alt="Pagar pelo Paypal">
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-2">
+          <img src="images/hipercard.png" alt="Pagar pelo Hipercard">
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-2">
+          <img src="images/american.png" alt="Pagar pelo American Express">
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid borghesi-bgcolor mt-5 py-4 white">
+        <h1 class="text-center">Lorem Ipsum de título</h1>
+        <div class="row mt-5 j-center">
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                <img src="images/dentin.jpg" alt="Imagem Dente" />
+                <h5>Lorem Ipsum</h5>
+                <p>Lorem Ipsum Inmet sei lá das quantas</p>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                <img src="images/diagnostico.jpg" alt="Imagem Diagnóstico" />
+                <h5>Lorem ipsum</h5>
+                <p>Lorem Ipsum Inmet sei lá das quantas</p>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                <img src="images/escova.jpg" alt="Imagem Escova" />
+                <h5>Lorem Ipsum</h5>
+                <p>Lorem Ipsum Inmet sei lá das quantas</p>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-3">
+                <img src="images/cego.jpg" alt="Imagem Sem visão" />
+                <h5>Lorem Ipsum</h5>
+                <p>Lorem Ipsum Inmet sei lá das quantas</p>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-3">
+                <img src="images/morelo.jpg" alt="Imagem Livro" />
+                <h5>Lorem Ipsum</h5>
+                <p>Lorem Ipsum Inmet sei lá das quantas</p>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-3">
+                <img src="images/shield.jpg" alt="Imagem Escudo" />
+                <h5>Lorem Ipsum</h5>
+                <p>Lorem Ipsum Inmet sei lá das quantas</p>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-3">
+                <img src="images/tubo.jpg" alt="Imagem Tubos de ensaio" />
+                <h5>Lorem Ipsum</h5>
+                <p>Lorem Ipsum Inmet sei lá das quantas</p>
+              </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-5 text-center">
+      <h1 class="text-center blue text-uppercase">Receba um certificado exclusivo</h1>
+      <p class="text-center">*Desde que tenha assistido 80% do curso</p>
+      <img src="images/certificado.jpeg" class="img-fluid" alt="Imagem Certificado"/>
+    </div>
+
+    <div class="container-fluid mt-4 pb-3">
+        <div class="container text-center mt-4">
+          <button type="button" class="btn borghesi-bgcolor2 white btn-lg btn-block rounded-pill mt-5">Block level button</button>
+          <p class="red fw-900 my-5">*Vagas extremamente limitadas!</p>
+        </div>
+    </div>
+  
+    <div class="container-fluid text-center my-4">
+        <div class="row">
+          <div class="col-sm-12 col-md-4 col-lg-2">
+            <img src="images/boleto.png" alt="Pagar pelo boleto">
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-2">
+            <img src="images/visa.png" alt="Pagar pelo Visa">
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-2">
+            <img src="images/mastercard.png" alt="Pagar pelo Mastercard">
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-2">
+            <img src="images/paypal.png" alt="Pagar pelo Paypal">
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-2">
+            <img src="images/hipercard.png" alt="Pagar pelo Hipercard">
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-2">
+            <img src="images/american.png" alt="Pagar pelo American Express">
+          </div>
+        </div>
+    </div>
+
+      <div class="container-fluid mt-5 text-center">
+        <h3 class="text-center">Depoimentos de ex-alunos que tiveram resultados surpreendentes com o Curso da Borghesi</h3>
+        <p class="text-center">*Os depoimentos abaixo são relativos ao Curso da Borghesi presencial e 27 hs de duração.</p>
+        <div class="container">
+          <div class="row j-center">
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/2RjE8a1flUE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" class="embed-responsive embed-responsive-4by3"  allowfullscreen></iframe>
+                <p class="font-italic text-justify grey mt-1">“Olá, meu nome é Karen. Por muitos anos eu sofri com dores e estalidos na ATM, dificuldade para mastigar alimentos duros e não conseguia mais dormir sobre o lado afetado. Foi então que procurei pela Dra. Gisele que me atendeu na sua clínica...”</p>
+                <p class="font-italic text-left">- Karen</p>
+                <a href="https://youtu.be/2RjE8a1flUE" target="_blank" rel="noopener noreferred" class="gold text-left font-weight-bold">Assista ao vídeo</a>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ThRKU1QWHdk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" class="embed-responsive embed-responsive-4by3" allowfullscreen></iframe>
+                <p class="font-italic text-justify grey mt-1">“Meu nome é Maria Cecília, tenho 55 anos, há 10 anos eu vinha sofrendo uma dor de cabeça, já acordava com essa dor de cabeça, o dia todo, não tinha remédio que passasse...”</p>
+                <p class="font-italic text-left">- Maria Cecília</p>
+                <a href="https://youtu.be/ThRKU1QWHdk" target="_blank" rel="noopener noreferred" class="gold text-left font-weight-bold">Assista ao vídeo</a>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/H4W4Wr2-NyY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" class="embed-responsive embed-responsive-4by3" allowfullscreen></iframe>
+                <p class="font-italic text-justify grey mt-1">“Meu nome é Patrícia,  procurei a Gisele através de uma indicação, vim com muita dor, eu tinha muitas dores laterais e a gente começou um tratamento foram de 10 sessões e as dores foram diminuindo...”</p>
+                <p class="font-italic text-left">- Patrícia</p>
+                <a href="https://youtu.be/H4W4Wr2-NyY" target="_blank" rel="noopener noreferred" class="gold text-left font-weight-bold">Assista ao vídeo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container my-5 text-center">
+        <span class="gold font-weight-bold text-uppercase h1">
+            CONFIRA OUTROS 80 DEPOIMENTOS DE EX-ALUNOS CLICANDO
+        </span>
+        <span class="gold font-weight-bold text-uppercase h1">
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferred">AQUI</a>
+        </span>
+        <div class="container-fluid mt-6">
+          <img src="images/gara.jpg" alt="Selo de garantia" class="img-fluid">
+          <p class="text-center mt-3">Até 07 dias depois do pagamento, você pode cancelar por qualquer motivo, que te devolveremos todo o valor pago.
+            Após esse período já te enviaremos as amostras de produtos, apostila e livro (se ainda não tiver).</p>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="container rounded">
+          <div class="card-body">
+            <div class="card rounded shadow border-borghesi mx-auto w-75">
+              <span class="card-title card-header borghesi-bgcolor text-center"></span>
+              <h3 class="card-title text-center mt-3">Lorem Ipsum Título</h3>
+              <p class="card-text text-center red mt-3">Preço</p>
+              <p class="card-text text-center red">Preço 2</p>
+              <p class="card-text text-center text-uppercase font-weight-bold">*IMPORTANTE: NESSES CASOS, SOLICITE OS BOLETOS PELO WHATSAPP 19 99139-9303.
+                O INÍCIO DO CURSO DE DARÁ APÓS A COMPENSAÇÃO DO BOLETO BANCÁRIO.</p>
+              <h4 class="card-title text-center borghesi-color">Diferenciais do curso:</h4>
+              <div class="container">
+                <ul class="text-justify">
+                  <li class="my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita enim similique, alias dolores iusto cumque illo amet sit ut natus sed fuga minus? Magnam earum quaerat eligendi! Praesentium, mollitia sed.</li>
+                  <li class="my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. At nisi ad optio perspiciatis, et labore dolore, autem ipsam ut laboriosam dolor alias, in nihil debitis aliquam quo nam quaerat recusandae.</li>
+                  <li class="my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur doloremque quas autem nulla dolore voluptas dolores voluptates aliquid libero non modi eligendi reiciendis iure eveniet eius, aperiam eos et!</li>
+                  <li class="my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus officia expedita in beatae aspernatur, tempore, modi omnis dolor qui quisquam id velit ab neque? Quis eligendi sapiente modi praesentium non.</li>
+                  <li class="my-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit cupiditate alias, explicabo, minima aliquam magnam distinctio quam et enim fugit ipsam reiciendis doloribus, nemo eligendi fuga laborum laudantium ut in.</li>
+                  <li class="my-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam fugiat animi beatae consequatur praesentium maxime impedit nulla! Aperiam corrupti quis assumenda! Sapiente, modi distinctio! Minus ipsam deleniti sunt consectetur. Totam.</li>
+                  <li class="my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, nisi eum id labore quae ex impedit officia nesciunt aspernatur quaerat quod, a nostrum rerum asperiores ut reprehenderit minus excepturi distinctio.</li>
+                  <li class="my-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum doloribus iusto dolore tenetur quisquam voluptates sequi? Cupiditate delectus ipsum perspiciatis, velit laudantium recusandae. Porro non delectus tempora, alias est quia.</li>
+                  <li class="my-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id obcaecati aliquid soluta pariatur similique ea maiores ad laboriosam placeat veniam, nemo autem, labore ut eligendi odit nam, nihil esse ab?</li>
+                  <li class="my-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, alias inventore aliquam veritatis, labore debitis libero perferendis eligendi architecto ex sint itaque aliquid adipisci sed? Sit iste fugit perspiciatis explicabo.</li>
+                  <li class="my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quibusdam cupiditate quas commodi veritatis aliquid iusto libero necessitatibus, molestias corrupti velit similique neque, mollitia provident tempore omnis recusandae quam quisquam.</li>
+                </ul>
+                <button type="button" class="btn borghesi-bgcolor2 white btn-lg btn-block rounded-pill my-3">Block level button</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid bg-grey">
+        <div class="container mt-7 py-5 w-40">
+              <div class="card rounded shadow border-borghesi2">
+                  <div class="card-header borghesi-bgcolor2 white">
+                      <span class="text-center"></span>
+                  </div>
+                  <div class="card-body">
+                    <div class="card-text">
+                        <h3 class="card-title text-center mt-3">Horário de atendimento</h3>
+                      <p class="text-center">SEGUNDA À SEXTA – 8:00 às 19:00 horas </br>
+                          AOS SÁBADOS –  8:00 as 13:00 horas.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card rounded shadow mt-5 border-borghesi">
+                    <div class="card-header borghesi-bgcolor">
+                      <span class="text-center"></span>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-text">
+                          <h3 class="card-title text-center mt-3">Contato</h3>
+                        <p class="text-center">ATENDIMENTO WHATSAPP: (19) 99139-9303 </br>
+                          PARA TIRAR DÚVIDAS DA INSCRIÇÃO AO PROGRAMA</p>
+                      </div>
+                    </div>
+                </div>
+                <button type="button" class="btn borghesi-bgcolor btn-lg btn-block rounded-pill mt-5">Block level button</button>
+        </div>
+      </div>
+
+      <footer id="sticky-footer" class="py-5 bg-dark text-white-50">
+          <div class="container text-center">
+            <small>Copyright &copy; Your Website</small>
+          </div>
+        </footer>
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        var modal= document.getElementById('modal-wrapper');
+        window.onclick= function(event){
+          if(event.target==modal){
+            modal.style.display="none";
+          }
+        }
+      </script>
+  </body>
+</html>

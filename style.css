@@ -1,0 +1,115 @@
+.fw-900{
+    font-weight: 900;
+}
+
+.white{
+    color: white;
+}
+
+.red{
+    color:red;
+}
+
+.blue{
+    color: royalblue;
+}
+
+.grey{
+    color: gray;
+}
+
+.gold{
+    color: darkorange;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.border-black{
+    border-color: black !important;
+}
+
+.borghesi-bgcolor{
+    background-color: #03be98;
+}
+
+.bg-grey{
+    background-color: lightgrey;
+}
+
+.borghesi-color{
+    color: #03be98
+}
+
+.borghesi-bgcolor2{
+    background-color: #690d2e;
+}
+
+.j-center{
+    justify-content: center;
+}
+
+.d-caption{
+    display: table-caption;
+}
+
+.mt-6{
+    margin-top: 6rem !important;
+}
+
+.mt-7{
+    margin-top: 7rem !important;
+}
+
+.mt-8{
+    margin-top: 8rem !important;
+}
+
+.mt-9{
+    margin-top: 9rem !important;
+}
+
+.mt-10{
+    margin-top: 10rem !important;
+}
+
+.card-color{
+    border-top: 10px solid red;
+}
+
+.shadow{
+    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.25) !important;
+}
+
+
+.border-red{
+    border-color: red;
+}
+
+.border-green{
+    border-color: green;
+}
+
+.border-borghesi{
+    border-color: #03be98
+}
+
+.border-borghesi2{
+    border-color: #690d2e;
+}
+
+@media (min-width: 576px) { 
+    .w-40{
+        width: 40%;
+    }
+ }
+
+.img-fluid-borghesi{
+    max-width: 55%;
+    height: auto;
+}
+
+.card-header{
+    padding: 0.25rem 1.25rem;
+}
